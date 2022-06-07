@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "khongduocfailmon",
+    "slug": "khongduocfailmon",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
