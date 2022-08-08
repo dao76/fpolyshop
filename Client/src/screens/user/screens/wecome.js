@@ -5,7 +5,7 @@ import React from 'react'
 export default function Splash({navigation}) {
     setTimeout(() => {
         navigation.navigate('Login');
-    }, 10000);
+    }, 3000);
 
    
         return (

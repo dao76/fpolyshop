@@ -249,10 +249,20 @@
       <ul id="tables-nav" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
 
         <li>
-          <a href="tables-data.html" class="active">
-            <i class="bi bi-circle"></i><span>Data Tables</span>
+          <a href="/san-pham">
+            <i class="bi bi-circle"></i><span>Table ProDucts</span>
           </a>
         </li>
+        <li>
+          <a href="/user">
+            <i class="bi bi-circle"></i><span>Table User</span>
+          </a>
+        </li>
+        <li>
+          <a href="/mygift">
+            <i class="bi bi-circle"></i><span>Table My Gift</span>
+          </a>
+
       </ul>
     </li><!-- End Tables Nav -->
 
@@ -309,12 +319,12 @@
 
   <h1>Product Insert</h1>
   <form role="form" method="post" action="/san-pham" enctype="multipart/form-data">
-   
-  
+
+
 
     <div class="form-group">
       <label> Name</label>
-      <input class="form-control"  onchange="ktra()" id="name" name="name" type="text" />
+      <input class="form-control" onchange="ktra()" id="name" name="name" type="text" />
     </div>
     <div class="form-group" style="margin-top: 10;">
       <label>Price</label>
@@ -324,46 +334,30 @@
       <label>Quantity</label>
       <input class="form-control" name="quantity" type="text" />
     </div>
-    <div class="form-group">
-      <label>Description</label>
-      <textarea name="description" style="width: 100%; height: 40px;"></textarea>
-    </div>
-    <div class="form-group">
-      <label>Category</label>
-      <select name="category_id">
-        {{#each categories}}
-        <option value="{{this._id}}">{{this.name}}</option>
-        {{/each}}
-      </select>
-    </div>
+
 
     <div class="form-group">
       <label>Image</label>
       <input id="image-file" class="form-control" onchange="onChangeFile()" name="image" type="file" />
       <img id="image-view" style="display: none; object-fit: cover;" width="300" height="300" src="" />
     </div>
-    <div class="form-group">
-      <label>Released</label>
-      <input class="form-control" name="released" type="date" />
-    </div>
-
 
     <div class="text-center">
-          <button type="submit"  name="submit" onchange="ktra()" id="submit" class="btn btn-primary">Save Data</button>
-        </div>
+      <button type="submit" name="submit" onchange="ktra()" id="submit" class="btn btn-primary">Save Data</button>
+    </div>
   </form>
   </div>
 
   <script>
-    const ktra = () =>{
-     const name =document.getElementById('name').value;
-    const submit =document.getElementById('submit').value;
+    const ktra = () => {
+      const name = document.getElementById('name').value;
+      const submit = document.getElementById('submit').value;
 
-     if(!name || name.trim().length == 0){
+      if (!name || name.trim().length == 0) {
         submit.disabled = true;
-     }else{
-       submit.disabled = false;
-     }
+      } else {
+        submit.disabled = false;
+      }
     }
     const onChangeFile = () => {
       const file = document.getElementById('image-file').files[0];

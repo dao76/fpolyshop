@@ -6,15 +6,14 @@ var logger = require('morgan');
 const session = require('express-session');
 const mongoose = require('mongoose');
 require('./compoments/user/model');
-require('./compoments/categories/model');
+
 require('./compoments/products/model');
-require('./compoments/carts/model');
+
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/products');
-var apiRouter = require('./routes/api');
-var categoryRouter = require('./routes/categorys');
-var cartRouter = require('./routes/carts');
+var duanRouter = require('./routes/duan')
+var adminRouter = require('./routes/admin')
+
 
 var app = express();
 
@@ -30,29 +29,30 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({
   secret: 'mykey',
   resave: true,
-  saveUninitialized : true,
-  cookie:{ secure: false}
+  saveUninitialized: true,
+  cookie: { secure: false }
 }))
 
 
 app.use('/', indexRouter);
-app.use('/san-pham', usersRouter);
-app.use('/danh-muc', categoryRouter);
-app.use('/api', apiRouter);
-app.use('/cart', cartRouter);
+app.use('/du-an', duanRouter);
+app.use('/admin', adminRouter);
+
+
+
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   next(createError(404));
 });
-mongoose.connect('mongodb+srv://admin:123@cluster0.ahl7w.mongodb.net/CP16301?retryWrites=true&w=majority', {  
+mongoose.connect('mongodb+srv://admin:123@cluster0.ahl7w.mongodb.net/batdongsankimanh?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
-.then(() => console.log('>>>>>>>>>> DB Connected!!!!!!'))
-.catch(err => console.log('>>>>>>>>> DB Error: ', err));
+  .then(() => console.log('>>>>>>>>>> DB Connected!!!!!!'))
+  .catch(err => console.log('>>>>>>>>> DB Error: ', err));
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};

@@ -4,14 +4,19 @@ const ObjectId = Schema.ObjectId;
 
 const productSchema = new Schema({
     id: { type: ObjectId },
-    name: { type: String },
-    price: { type: Number },
-    quantity: { type :Number},
-    description: { type: String },
-    category_id: { type: Schema.Types.ObjectId, ref: 'category' },
+    tenduan: { type: String },
+    mieuta: { type: String },
     image: { type: String },
-    released :{type : Date}
-    
+    tenthuongmai: { type: String },
+    quymo: { type: String },
+    dientichtb: { type: String },
+    chudautu: { type: String },
+    nhaphattrien: { type: String },
+    vitri: { type: String },
+    giaban: { type: String },
+    anhlienquan: { type: String },
+    anhlienquan1: { type: String },
+    anhlienquan2: { type: String },
 });
 
 module.exports = mongoose.model('product', productSchema);

@@ -5,8 +5,8 @@ import { UserConText } from '../UserContext';
 const Login = (props) => {
   const { navigation } = props;
   const { onLogin } = useContext(UserConText);
-  const [username, setUsername] = useState('daopro@gmail.com');
-  const [password, setPassword] = useState('12345');
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
 
   const login = async () => {
       
@@ -22,7 +22,7 @@ const Login = (props) => {
             <Image source={require('./../../../assets/images/Icon.png')} />
         </View>
         <View style={styles.text}>
-            <Text style={styles.textWelcome}>Welcome to Lafyuu</Text>
+            <Text style={styles.textWelcome}>Welcome to Fpolyshop</Text>
             <Text style={styles.textSignin}>Sign in to continue</Text>
         </View>
         <View style={styles.inputContainer}>
@@ -67,7 +67,8 @@ const Login = (props) => {
         </View>
         <View style={styles.footerContainer}>
             <Text style={styles.textForgot}>Forgot Password?</Text>
-            <Text style={styles.textAccount}>Don’t have a account? <Text style={styles.textRegister}>Register</Text></Text>
+            <Text style={styles.textAccount}>Don’t have a account? <Text style={styles.textRegister}
+            onPress={()=>navigation.navigate('Register')}>Register</Text></Text>
         </View>
     </View>
 )

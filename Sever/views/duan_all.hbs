@@ -1,0 +1,417 @@
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top ">
+    <div class="container-fluid">
+
+        <div class="row justify-content-center">
+            <div class="col-xl-9 d-flex align-items-center justify-content-lg-between">
+
+                <!-- Uncomment below if you prefer to use an image logo -->
+                <img src="https://canholegacycentral.vn/themes/1/logo.jpg" height="85"
+                    style="width: 90px;border-radius: 50%; margin-right: 100px;">
+
+
+                <nav id="navbar" class="navbar order-last order-lg-0">
+                    <ul>
+                        <li><a class="nav-link scrollto active" href="#hero">Trang Chủ</a></li>
+                        <li><a class="nav-link scrollto" href="#about">Giới thiệu</a></li>
+                        <li><a class="nav-link scrollto" href="#duan">Dự án</a></li>
+                        <li><a class="nav-link scrollto " href="#tuvan">Tư vấn và tham quan</a></li>
+                        <li><a class="nav-link scrollto " href="#news">Tin tức</a></li>
+                        <li><a class="nav-link scrollto" href="#images">Hình ảnh</a></li>
+
+
+                        </li>
+                        <li><a class="nav-link scrollto" href="#contact">Tuyển dụng</a></li>
+                    </ul>
+                    <i class="bi bi-list mobile-nav-toggle"></i>
+                </nav><!-- .navbar -->
+
+                <a href="#contact" class="get-started-btn scrollto" style="background-color: orangered;">Liên Hệ</a>
+            </div>
+        </div>
+
+    </div>
+</header><!-- End Header -->
+
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="d-flex flex-column justify-content-center">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-8">
+                <h1>KIM ANH GROUP</h1>
+                <h2>Nhà Đất mua bán chất lượng Việt Nam</h2>
+                <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox play-btn mb-4"></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<main id="main">
+
+    <!-- ======= About Us Section ======= -->
+
+
+    <!-- ======= Services Section ======= -->
+    <section id="duan" class="services">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Tất cả dự án</h2>
+                {{!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.
+                    Sit sint
+                    consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
+                    fugiat sit in iste officiis commodi quidem hic quas.</p> --}}
+            </div>
+
+            <div class="row">
+                {{#each products}}
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch table">
+                    <div class="icon-box">
+                        <img class="card-img-top" src="{{this.image}}" height="500px" <h4><a style="color: orangered;"
+                            href="">{{this.tenduan}}</a></h4>
+                        <p>{{this.mieuta}}</p>
+                        <p><a href="http://batdongsankimanh.herokuapp.com/du-an/{{this._id}}/detail">Chi tiết</a></p>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+
+
+        </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Cta Section ======= -->
+
+
+
+    <!-- ======= Clients Section ======= -->
+
+
+    <!-- ======= Counts Section ======= -->
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="images" class="portfolio">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Hình ảnh</h2>
+                <p>Hình ảnh minh họa một số dự án nổi bật.</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12 d-flex justify-content-center">
+                    <ul id="portfolio-flters">
+                        <li data-filter="*" class="filter-active">Tất cả</li>
+                        <li data-filter=".filter-LEGACYCENTRAL">LEGACY CENTRAL</li>
+                        <li data-filter=".filter-CENTURYCITY">CENTURY-CITY</li>
+                        <li data-filter=".filter-web">ROYAL-TOWN</li>
+                        <li data-filter=".filter-app">MEGA-CITY</li>
+                        <li data-filter=".filter-card">EASTGATE</li>
+                        <li data-filter=".filter-web">PARADISE-RIVERSID</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row portfolio-container">
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-LEGACYCENTRAL">
+                    <img src="assets/img/portfolio/legacy.png" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                        <h4>LEGACY CENTRAL</h4>
+
+                        <a href="assets/img/portfolio/legacy.png" data-gallery="portfolioGallery"
+                            class="portfolio-lightbox preview-link" title="LEGACY CENTRAL"><i
+                                class="bx bx-plus"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item filter-LEGACYCENTRAL">
+                    <img src="assets/img/portfolio/legacy2.png" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                        <h4>LEGACY CENTRAL</h4>
+
+                        <a href="assets/img/portfolio/legacy2.png" data-gallery="portfolioGallery"
+                            class="portfolio-lightbox preview-link" title="LEGACY CENTRAL"><i
+                                class="bx bx-plus"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item filter-CENTURYCITY">
+                    <img src="assets/img/portfolio/img1.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                        <h4>CENTURY-CITY</h4>
+
+                        <a href="assets/img/portfolio/img1.jpg" data-gallery="portfolioGallery"
+                            class="portfolio-lightbox preview-link" title="LEGACY CENTRAL"><i
+                                class="bx bx-plus"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item filter-CENTURYCITY">
+                    <img src="assets/img/portfolio/img2.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                        <h4>CENTURY-CITY</h4>
+
+                        <a href="assets/img/portfolio/img2.jpg" data-gallery="portfolioGallery"
+                            class="portfolio-lightbox preview-link" title="LEGACY CENTRAL"><i
+                                class="bx bx-plus"></i></a>
+                    </div>
+                </div>
+
+
+            </div>
+    </section><!-- End Portfolio Section -->
+
+    <!-- ======= Pricing Section ======= -->
+
+    <!-- ======= Faq Section ======= -->
+    <section id="faq" class="faq">
+        <div class="container-fluid">
+
+            <div class="row">
+
+                <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
+
+                    <div class="content">
+                        <h3><strong>Hỏi Đáp</strong> </h3>
+
+                    </div>
+
+                    <div class="accordion-list">
+                        <ul>
+                            <li>
+                                <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1">Làm thế
+                                    nào để liên hệ tham quan dự án? <i class="bx bx-chevron-down icon-show"></i><i
+                                        class="bx bx-chevron-up icon-close"></i></a>
+                                <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
+                                    <p>
+                                        Bạn vui lòng nhập thông tin vào biểu mẫu "liên hệ " để có thể đăng ký trực tiếp
+                                        tham quan hoặc hotline: 090633076 !
+                                    </p>
+                                </div>
+                            </li>
+
+
+                            <li>
+                                <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed">Kim
+                                    Anh Group còn tuyển dụng nhân sự hay không ? <i
+                                        class="bx bx-chevron-down icon-show"></i><i
+                                        class="bx bx-chevron-up icon-close"></i></a>
+                                <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
+                                    <p>
+                                        Chào bạn ! Kim Anh Group ở mọi chi nhánh đang bắt đầu tuyển nhân sự số lượng lớn
+                                        ạ!
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed">Kim
+                                    Anh group tuyển nhận sự ra sao với phúc lơi ? <i
+                                        class="bx bx-chevron-down icon-show"></i><i
+                                        class="bx bx-chevron-up icon-close"></i></a>
+                                <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
+                                    <p>
+                                        🎀🎀 KIM OANH GROUP - TUYỂN DỤNG NHÂN VIÊN BẤT ĐỘNG SẢN - CN QUẬN TÂN BÌNH
+                                        🌿🌿 PHỎNG VẤN ĐẠT - ĐI LÀM NGAY - TẠI QUẬN TÂN BÌNH 🌿🌿
+                                        ❎ Tuyển ngay 10 Chuyên viên BĐS đi làm ngay ❎
+                                        ▪️ Lương cơ bản từ 6,5 triệu đến 11,5 triệu/ tháng
+                                        ▪️ Phụ Cấp Marketing từ 1-3 triệu/ dự án
+                                        ▪️ Hoa hồng: từ 40.000.000đ đến 120.000.000/sản phẩm
+                                        ▪️ Nơi làm việc: Cộng Hoà, P13, Quận Tân Bình, Hồ Chí Minh
+                                        ➖➖➖➖➖➖➖➖
+                                        🔷 CÔNG TY CỔ PHẦN TẬP ĐOÀN ĐỊA ỐC KIM OANH LÀ CHỦ ĐẦU TƯ vừa là phân phối các
+                                        dự án BĐS Đất Nền sổ đỏ, Căn hộ, tại khu
+                                        vực Bình Dương, Đồng Nai, Hồ Chí Minh. Từ đây tới cuối năm sẽ có hơn 8000 sản
+                                        phẩm nên cần tìm các "SIÊU CHIẾN BINH -
+                                        CHIẾN ĐẤU HẾT MÌNH - ĐAM MÊ KIẾM TIỀN "
+                                        ➖➖➖➖➖➖➖➖
+                                        🗂🗂 YÊU CẦU - PHÚC LỢI CÔNG TY
+                                        🔸 Có kinh nghiệm BĐS là một lợi thế (Không có kinh nghiệm sẽ được đào tạo)
+                                        🔸 Năng động - ham học hỏi - hết mình với công việc
+                                        🔸 Du lịch, teambuiding trong nước và ngoài nước vài lần/năm và các hoạt động
+                                        văn nghệ, các hoạt động thể thao...
+                                        🔸 Được đào tạo hoàn toàn miễn phí từ cơ bản đến nâng cao chỉ có tại Tập Đoàn
+                                        Kim Oanh Group.
+                                        ➖➖➖➖➖➖➖➖
+                                        🔹 THƯỞNG NÓNG TỪ 10 TRIỆU - 50 TRIỆU, Thưởng theo quý, năm, thưởng hiệu quả
+                                        kinh doanh hàng tháng.
+                                        🔹 THƯỞNG TẾT, thưởng lễ , sinh nhật, ........
+                                        ️️🔹 Cơ hội thăng tiến lên cấp cao hơn từ 06 tháng làm việc trở lên.
+                                        🌈 Hỗ Trợ những kiến thức: Nắm bắt tâm lý khách hàng, thuyết phục khách, chăm
+                                        khách, Tìm kiếm khách,...
+                                        ➖➖➖➖➖➖➖➖
+                                        ⭕ SỐ LƯỢNG TUYỂN DỤNG CÓ HẠN - CÁC BẠN KHÔNG CÓ CƠ HỘI CHẦN CHỪ SUY NGHĨ NỮA
+                                        ⭕ CÁC BẠN HÃY NHẤC MÁY LÊN GỌI 0938 349 689 - ANH TRỌNG ĐỂ ĐƯỢC PHỎNG VẤN ONLINE
+                                        HOẶC ĐẶT LỊCH PHỎNG VẤN TRỰC TIẾP NHÉ
+                                    </p>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img"
+                    style='background-image: url("assets/img/faq.jpg");'>&nbsp;</div>
+            </div>
+
+        </div>
+    </section><!-- End Faq Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Liên Hệ</h2>
+
+            </div>
+        </div>
+
+        <div>
+            {{!-- <iframe style="border:0; width: 100%; height: 350px;"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
+                frameborder="0" allowfullscreen></iframe> --}}
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.085136866565!2d106.63536131411665!3d10.804791261625637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752964ca7e9f97%3A0x96c9116804d50a83!2zS2ltIE9hbmggR3JvdXAg4oCTIENoaSBOaMOhbmggQ-G7mW5nIEjDsmE!5e0!3m2!1sen!2s!4v1659589922659!5m2!1sen!2s"
+                width="100%" height="350px" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <div class="container">
+
+            <div class="row mt-5">
+
+                <div class="col-lg-4">
+                    <div class="info">
+                        <div class="address">
+                            <i class="ri-map-pin-line"></i>
+                            <h4>Địa chỉ chi nhánh Cộng hòa</h4>
+                            <p>Địa chỉ xxxxxxxxxx</p>
+                        </div>
+
+                        <div class="email">
+                            <i class="ri-mail-line"></i>
+                            <h4>Email</h4>
+                            <p>Tranquangniem@gmail.com</p>
+                        </div>
+
+                        <div class="phone">
+                            <i class="ri-phone-line"></i>
+                            <h4>Call:</h4>
+                            <p>+84 00000000</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-8 mt-5 mt-lg-0">
+
+                    <form action="" method="post" class="php-email-form">
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name"
+                                    required>
+                            </div>
+                            <div class="col-md-6 form-group mt-3 mt-md-0">
+                                <input type="email" class="form-control" name="email" id="email"
+                                    placeholder="Your Email" required>
+                            </div>
+
+                            <div class="col-md-6 form-group mt-3 mt-md-0">
+                                <input type="phone" name="phone" class="form-control" placeholder="Số Điện Thoại"
+                                    style="margin-bottom: 20px;  height: 60px;border-radius: 3%;">
+                            </div>
+                        </div>
+
+                        <div class="my-3">
+                            <div class="loading">Loading</div>
+                            <div class="error-message"></div>
+                            <div class="sent-message">Your message has been sent. Thank you!</div>
+                        </div>
+                        <div class="text-center"><button type="submit" style="background-color: orangered;">Send
+                                Message</button></div>
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Contact Section -->
+
+</main><!-- End #main -->
+
+<!-- ======= Footer ======= -->
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            {{!-- <h3>KnightOne</h3>
+            <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi
+                placeat.
+            </p>
+            <div class="social-links">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div> --}}
+            <div class="col-md-6 hide-xs">
+                <div class="footer-contact mt-10">
+                    <div class="clearfix footer_brand" style="margin-top: -80px;">
+                        <img src="https://canholegacycentral.vn/themes/1/logo.jpg"
+                            style="width: 150px;border-radius: 50%; margin-top: 80px;" />
+                        <div class="text" style="line-height: 30px;margin-top: 10px;">
+                            <span>CHỦ ĐẦU TƯ</span><br />
+                            CĂN HỘ HÀNG ĐẦU VIỆT NAM
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="footer-contact mt-10">
+                    <div class="footer_info">
+                        <p class=" contact-title">Thông tin liên hệ</p>
+                        <p style="margin-top: -30px;">Hotline: <b><a href="tel:0906333076" class="color"
+                                    style="font-size:17px;">0906 333
+                                    076</a></b></p>
+                        <p style="margin-top: -30px;"><b>Kim Anh Group(CN Cộng Hòa)</b></p>
+                        <p style="margin-top: -30px;"> Địa chỉ: 610 Đường Cộng Hòa, Phường 13,
+                            Tân
+                            Bình, Thành phố Hồ Chí Minh, Việt Nam</p>
+                        <p style="font-size:16px;line-height:1.7;margin-top: -30px;">Email: Tranquangniem@gmail.com</p>
+
+                    </div>
+
+                </div> <!-- footer contact -->
+            </div>
+
+            <div class="mb-4">
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-twitter"></i></a>
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-pinterest"></i> </a>
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="copyright">
+                &copy; Copyright <strong><span style="color: orangered;">Batdongsankimanh.com.vn</span></strong>. All
+                Rights
+                Reserved
+            </div>
+            <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you purchased the pro version. -->
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/knight-simple-one-page-bootstrap-template/ -->
+                Designed by <a href="https://facebook.com/tranquangdao.info/">Trần Quang Đạo</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-address">
+
+
+</footer><!-- End Footer -->
